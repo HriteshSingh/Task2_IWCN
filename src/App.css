@@ -1,38 +1,136 @@
-.App {
-  text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.Navbar-container{
+  border: 2px solid black;
+  height: 70px;
+  background-color: #202124;
   display: flex;
-  flex-direction: column;
+  color: white;
+  align-items: center;
+}
+.Navbar-container img{
+  margin-left: 10px;
+  cursor: pointer;
+}
+.Navbar-container .navbar-head{
+  margin-left: 10px;
+  font-size: 40px;
+  font-weight: 500;
+}
+.Notes-body{
+  background-color: #6d8a88;
+  height: 82.8vh;
+}
+.Notes-body .note-data{
+  display: flex;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
+  padding-top: 50px;
+}
+.note-data input{
+  margin-top: 10px;
+  width: 450px;
+  height: 70px;
+  font-size: 16px;
+  padding-left: 15px;
+  border-radius: 10px;
+  border: none;
+  background-color: #e1d9cc;
+}
+.note-data button{
+  cursor: pointer;
+  margin-top: 9px;
+  margin-left: 10px;
+  font-size: 15px;
+  background-color: black;
+  color: white;
+  border-radius: 5px;
+  height: 70px;
+  width: 90px;
+  border-radius: 10px;
+}
+.notes-fetch-data{
+  margin-top: 35px;
+  margin-left: 25px;
+  margin-right: 5px;
+  /* border: 2px solid black; */
+  height: 59vh;
+  overflow-y: scroll;
+}
+.para-style{
+  color: white;
+  font-weight: bold;
+  font-size: 20px;
+  text-align: center;
+}
+.notes-fetch-data .note-flex{
+  display: flex;
+  flex-wrap: wrap;
+  /* border: 2px solid black; */
+  /* height: 59vh; */
+}
+.notes-fetch-data .note-container{
+  /* display: flex; */
+  margin-top: 10px;
+  margin-left: 5px;
+  border: none;
+  width: 18vw;
+  background-color: #e1d9cc;
+  border-radius: 10px;
+  padding-left: 10px;
+  position: relative;
+}
+.notes-fetch-data .note-container p{
+  word-wrap: break-word;
+  text-align: justify;
+  padding-right: 10px;
+  padding-bottom: 20px;
+}
+.note-container .note-delete{
+  position: absolute;
+  bottom: 5px;
+  right: 10px;
+}
+.note-container .note-timestamp{
+  height: 20px;
+  position: absolute;
+  bottom: 25px;
+  left: 10px;
+}
+.note-container .note-timestamp p{
+  color: rgb(87, 87, 87);
+  font-size: 14px;
+}
+.note-container .note-delete img{
+  cursor: pointer;
+}
+.Footer-container{
+  /* border: 2px solid black; */
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  text-align: center;
+  background-color: #6d8a88;
   color: white;
 }
 
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+@media only screen and (max-width: 700px){
+  .Notes-body .note-data{
+    flex-direction: column;
   }
-  to {
-    transform: rotate(360deg);
+  .note-data input{
+    width: 320px;
+  }
+  .Notes-body{
+    height: 84.4vh;
+  }
+  .notes-fetch-data{
+    margin-left: 13px;
+    margin-right: 10px;
+    height: 51vh;
+  }
+  .notes-fetch-data .note-flex{
+    flex-direction: column;
+  }
+  .notes-fetch-data .note-container{
+    width: 86.5vw;
   }
 }
